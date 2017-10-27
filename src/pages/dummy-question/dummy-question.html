@@ -1,0 +1,32 @@
+<!--
+  Generated template for the DummyQuestionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigati)n.submitForm()
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>dummy_question</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<form *ngIf="dummyQuestionForm" [formGroup]="dummyQuestionForm" (ngSubmit)="submitForm()">
+
+<ion-item>
+<ion-input type="text" formControlName="question" placeholder="Write a Question"></ion-input>
+</ion-item>
+
+
+<button ion-button value="submit">Submit</button>
+</form>
+
+<ion-list *ngFor="let q of question">
+  <h1>{{q.question}}</h1>
+</ion-list>
+
+</ion-content>

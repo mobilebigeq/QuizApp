@@ -1,0 +1,61 @@
+<!--
+  Generated template for the DummyPostPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>dummy-post</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form *ngIf="impatientFeedback" [formGroup]="impatientFeedback" method="post" name="impatientFeedback">
+  <ion-item>
+    <ion-input type="text" name="city" formControlName="city" placeholder="City"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="number" name="txtNOB" formControlName="health_card_no" placeholder="Health Card Number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" name="txtNOB" formControlName="uhid_no" placeholder="Uh-Id Number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" name="name" formControlName="name" required="" placeholder="Enter Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" name="age" formControlName="age" required="" placeholder="Enter Age"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" name="mobile" formControlName="mobile" required="" maxlength="10" placeholder="Enter Mobile No"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input type="text" name="email" formControlName="email" required="" placeholder="Enter Email ID"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-input type="text" name="company" formControlName="company" required="" placeholder="Enter Company"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-input type="text" name="area" formControlName="area" placeholder="Enter Area/Location"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-input type="text" name="company" formControlName="zip" name="zip" placeholder="Enter Area/Location" ></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ul>
+                <label><input type="radio" formControlName="category" class="fcategory" data-class="fcategory" name="category" value="OBG/GYN">OBG/GYN</label>
+                <label><input type="radio" formControlName="category" class="fcategory" data-class="fcategory" name="category" value="Paediatrics">Paediatrics</label>
+                <label><input type="radio" formControlName="category" class="fcategory" data-class="fcategory" name="category" value="Fertility">Fertility</label>
+             </ul>
+                        </ion-item>
+
+
+
+
+<button ion-button end (click)="submitDetails()" value="Submit">POST</button>
+</form>
+</ion-content>
